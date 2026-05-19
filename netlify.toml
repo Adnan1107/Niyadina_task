@@ -1,0 +1,12 @@
+[build]
+  command = "mkdir -p netlify/functions/server public && pip install Django==5.2 mangum==0.19.0 --target netlify/functions/server && cp -r work project templates static netlify/functions/server/"
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+  force = true
