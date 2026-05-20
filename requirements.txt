@@ -12,6 +12,7 @@ djangorestframework==3.16.1
 fanstatic==1.5
 flatbuffers==25.12.19
 fonttools==4.61.1
+gunicorn==26.0.0
 idna==3.11
 js==1.0
 kiwisolver==1.4.9
