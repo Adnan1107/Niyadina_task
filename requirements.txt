@@ -41,6 +41,7 @@ tzdata==2025.2
 urllib3==2.5.0
 WebOb==1.8.9
 wheel==0.45.1
+whitenoise==6.12.0
 zope.component==7.0
 zope.deferredimport==6.0
 zope.deprecation==6.0

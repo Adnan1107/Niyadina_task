@@ -4,7 +4,7 @@ Django settings for work project.
 
 from pathlib import Path
 
-# Base paths
+# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY
@@ -12,7 +12,6 @@ SECRET_KEY = 'django-insecure-$=f#!k7pg_0&f%flf8kxdyi^v@=a*6hikp6#zi3(+u%aq^i_bc
 
 DEBUG = True
 
-# IMPORTANT: allow both local + deployment
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
@@ -20,7 +19,7 @@ ALLOWED_HOSTS = [
     "niyadina-task-2.onrender.com",
 ]
 
-# APPLICATIONS
+# INSTALLED APPS
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +45,7 @@ MIDDLEWARE = [
 
 # ROOT URL CONFIG
 ROOT_URLCONF = 'work.urls'
+
 
 # TEMPLATES
 TEMPLATES = [
@@ -76,16 +76,27 @@ DATABASES = {
 
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 # INTERNATIONALIZATION
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_TZ = True
 
 # STATIC FILES
@@ -97,5 +108,5 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# DEFAULT AUTO FIELD
+# DEFAULT PRIMARY KEY FIELD TYPE
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
